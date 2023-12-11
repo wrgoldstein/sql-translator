@@ -10,11 +10,9 @@ async def hello_world(request):
 
 @app.post("/t")
 async def data(request):
-    print(request.json)
     q = request.json["q"]
     read = request.json["read"]
     write = request.json["write"]
-    print(request.json)
     transpiled = sqlglot.transpile(q, read=read, write=write, pretty=True)[0]
-    print(transpiled)
+
     return response.json(dict(transpiled=transpiled))
