@@ -38,13 +38,14 @@
   <div class="flex">
     <label>
       Read
-      <input bind:value={read} list="langs">
+      <input placeholder="postgres" bind:value={read} list="langs">
     </label>
     <label>
       Write
-      <input bind:value={write} list="langs">
+      <input placeholder="bigquery" bind:value={write} list="langs">
     </label>
   </div>
+  <br/>
   <div class="flex">
     <textarea class="lang" bind:value={q}></textarea>
     <textarea class="lang" bind:value={transpiled}></textarea>
